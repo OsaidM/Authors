@@ -16,10 +16,6 @@ const AuthorsTable = props => {
         return `/${author._id}`
     }
 
-    const editAuthorUrl = author_id => {
-        return `${author_id}/edit`
-    }
-
     const deleteAuthor = url => {
         axios.delete("http://localhost:8000/api/authors" + url)
             .then(response => console.log("Author was successfully deleted: ", response))
@@ -50,8 +46,8 @@ const AuthorsTable = props => {
                                 <tr key={i}>
                                     <td>{author.name}</td>
                                     <td>
-                                        <button className="btn btn-warning btn-sm"><Link to={ getAuthorId(author) }>Edit</Link></button>
-                                        <button onClick={ (e)=>{deleteAuthor(getAuthorId(author))} } className="btn btn-danger btn-sm" style={{marginLeft: "10px"}}>Delete</button>
+                                        <button className="btn btn-primary btn-sm"><Link to={ getAuthorId(author) }>Edit</Link></button>
+                                        <button onClick={ (e)=>{deleteAuthor(getAuthorId(author))} } className="btn btn-warning btn-sm" style={{marginLeft: "10px"}}>Delete</button>
                                     </td>
                                 </tr>
                             ))

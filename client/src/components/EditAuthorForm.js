@@ -73,7 +73,7 @@ const EditAuthorForm = props => {
                         </div>
                         <div className="form-group text-right">
                             <button onClick={()=>navigate("/")} type="button" className="btn btn-secondary btn-sm">Cancel</button>
-                            <button className="btn btn-primary btn-sm" style={{marginLeft: "10px"}}>Submit</button>
+                            <button className="btn btn-success btn-sm" style={{marginLeft: "10px"}}>Submit</button>
                         </div>
                     </form>
                 </div>

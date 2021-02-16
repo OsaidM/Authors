@@ -2,8 +2,6 @@ import './App.css';
 import {Router} from "@reach/router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-
-import Header from "./components/Header"
 import AuthorsTable from "./components/AuthorsTable"
 import CreateAuthorForm from "./components/CreateAuthorForm"
 import EditAuthorForm from "./components/EditAuthorForm"
@@ -14,7 +12,6 @@ function App() {
 
   return (
       <div className="App">
-        <Header />
         <Router>
           <AuthorsTable counter={counter} setCounter={setCounter} path="/"/>
           <CreateAuthorForm setCounter={setCounter} path="/new"/>
